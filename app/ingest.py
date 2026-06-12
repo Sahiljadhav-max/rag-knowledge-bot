@@ -2,8 +2,8 @@ import os
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_pinecone import PineconeVectorStore
-from pinecone import Pinecone
+from langchain_pinecone import Pinecone as PineconeVectorStore
+
 from app.config import Config
 
 def get_loader(file_path):
@@ -27,7 +27,7 @@ def ingest_document(file_path):
 
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-    pc = Pinecone(api_key=Config.PINECONE_API_KEY)
+
     PineconeVectorStore.from_documents(
         chunks,
         embeddings,

@@ -1,7 +1,7 @@
 import os
 from langchain_groq import ChatGroq
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_pinecone import PineconeVectorStore
+from langchain_pinecone import Pinecone as PineconeVectorStore
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.prompts import PromptTemplate
