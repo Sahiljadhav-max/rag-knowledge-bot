@@ -44,7 +44,7 @@ multidict==6.7.1
 numpy==1.26.4
 orjson==3.11.9
 packaging==24.2
-pinecone-client==5.0.1
+pinecone-client==3.2.2
 pinecone-plugin-interface==0.0.7
 propcache==0.5.2
 pydantic==2.13.4
